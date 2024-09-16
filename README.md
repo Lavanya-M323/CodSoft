@@ -24,4 +24,5 @@ I would like to extend my sincere thanks and gratitude to the entire CodSoft tea
 
 
 CodSoft has not only deepened my technical expertise but also given me exposure to real-world projects and a collaborative work environment, which will undoubtedly benefit my future career.
+
 Once again, thank you to CodSoft for this fantastic internship experience!
