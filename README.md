@@ -21,3 +21,7 @@ Below is the list of tasks I have completed as part of this internship:
 
 ## Thanking CodSoft
 I would like to extend my sincere thanks and gratitude to the entire CodSoft team for providing me with this incredible opportunity to be a part of their internship program. The experience gained during this internship has been invaluable, and I am grateful for the guidance, mentorship, and support I received from CodSoft's team.
+
+
+CodSoft has not only deepened my technical expertise but also given me exposure to real-world projects and a collaborative work environment, which will undoubtedly benefit my future career.
+Once again, thank you to CodSoft for this fantastic internship experience!
