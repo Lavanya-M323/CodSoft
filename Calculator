@@ -1,0 +1,45 @@
+import os
+print("Welcome to the Basic Calculator!")
+print("--------------------------------")
+
+def add(a, b):
+    return a+b
+    
+def subtract(a, b):
+    return a-b
+
+def multiply(a, b):
+    return a*b
+
+def divide(a, b):
+    if b == 0:
+        return "Error : Division by zero is not allowed."
+    else:
+        return a/b
+
+operations_dict = {"+": add, "-": subtract, "*": multiply, "/": divide}
+
+def calculator():
+    num1 = float(input("Enter first number : "))
+    for key in operations_dict:
+        print(key)
+    continue_calculation = True
+    while continue_calculation:
+        operation = input("Pick an operation : ")
+        num2 = float(input("Enter second number : "))
+        function = operations_dict[operation]
+        output = function(num1, num2)
+        print(f"{num1} {operation} {num2} = {output}")
+        again = input(f"Enter 'c' to continue calculation with the {output} "
+                      f"or 'n' to start new calculation or 'e' to exit : ").lower()
+        if again == 'c':
+            num1 = output
+        elif again == 'n':
+            continue_calculation = False
+            os.system('cls')
+            calculator()
+        else:
+            continue_calculation = False
+            print("Bye!")
+
+calculator()
