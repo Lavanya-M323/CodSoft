@@ -1,46 +1,57 @@
-# This is a simple calculator with basic arithmetic operations.
+# This is a simple calculator with basic operations.
 import os
 print("Welcome to the Basic Calculator!")
 print("--------------------------------")
 
-def add(a, b):
+
+# Define functions for basic arithmetic operations.
+def add(a, b):       # Addition
     return a+b
-    
-def subtract(a, b):
+
+
+def subtract(a, b):  # Subtraction
     return a-b
 
-def multiply(a, b):
+
+def multiply(a, b):  # Multiplication
     return a*b
 
-def divide(a, b):
+
+def divide(a, b):   # Division
     if b == 0:
         return "Error : Division by zero is not allowed."
     else:
         return a/b
 
+
+# Dictionary to map operators to functions
 operations_dict = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
-def calculator():
+
+def calculator():    # Main function for the Calculator
     num1 = float(input("Enter first number : "))
-    for key in operations_dict:
+    for key in operations_dict:       # Display available operations
         print(key)
     continue_calculation = True
     while continue_calculation:
-        operation = input("Pick an operation : ")
+        operation = input("Pick an operation : ")       # Get the operation from the user
         num2 = float(input("Enter second number : "))
-        function = operations_dict[operation]
+        function = operations_dict[operation]           # Perform the operation
         output = function(num1, num2)
-        print(f"{num1} {operation} {num2} = {output}")
+        print(f"{num1} {operation} {num2} = {output}")  # Display the result
+        # Ask the user if they want to continue or exit
         again = input(f"Enter 'c' to continue calculation with the {output} "
                       f"or 'n' to start new calculation or 'e' to exit : ").lower()
         if again == 'c':
             num1 = output
         elif again == 'n':
             continue_calculation = False
-            os.system('cls')
-            calculator()
+            os.system('cls')    # Clear the screen
+            calculator()        # Restart the calculator
         else:
             continue_calculation = False
             print("Bye!")
 
+
+# Run the Calculator
 calculator()
